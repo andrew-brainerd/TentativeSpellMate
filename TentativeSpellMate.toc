@@ -1,0 +1,9 @@
+## Interface: 20501
+## Title: <Tentative> SpellMate
+## Notes: <Tentative> Guild Utility
+## Author: andrew-brainerd
+## Version: 1.0
+## SavedVariables: SpellLocker
+
+embeds.xml
+TentativeSpellMate.lua
