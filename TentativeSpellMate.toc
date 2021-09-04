@@ -1,6 +1,6 @@
 ## Interface: 20501
-## Title: <Tentative> SpellMate
-## Notes: <Tentative> Guild Utility
+## Title: <Tentative> SpellMate v1.0
+## Notes: <Tentative> Spell Updater
 ## Author: andrew-brainerd
 ## Version: 1.0
 ## SavedVariables: SpellLocker
