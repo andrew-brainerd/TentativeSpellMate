@@ -2,7 +2,7 @@
 ## Title: <Tentative> SpellMate v1.0
 ## Notes: <Tentative> Spell Updater
 ## Author: andrew-brainerd
-## Version: 1.0
+## Version: 1.1
 ## SavedVariables: SpellLocker
 
 embeds.xml
