@@ -14,13 +14,11 @@ function TentativeSpellMate:SaveSpells()
     local i = 1
     while true do
         local spellName, spellSubName = GetSpellBookItemName(i, BOOKTYPE_SPELL)
-        TentativeSpellMate:Print("Spell Name: " .. spellName)
-        TentativeSpellMate:Print("Spell Name 2: " .. spellSubName)
         if not spellName then do break end end
 
-        SpellList[name]["spells"] = {
+        SpellList[name]["spells"][i] = {
             spellName = spellName,
-            spellRank = spellSubName
+            spellRank = spellRank
         }
 
         i = i + 1
@@ -29,17 +27,14 @@ function TentativeSpellMate:SaveSpells()
     SpellLocker = SpellList
 end
 
-function TentativeSpellMate:ShouldUpdateGuild()
-    return lastUpdateTime == nil or time() - lastUpdateTime > 10000
+function TentativeSpellMate:ShouldUpdateSpells()
+    return lastUpdateTime == nil or time() - lastUpdateTime > 1000
 end
 
-
 TentativeSpellMate:RegisterEvent("GUILD_ROSTER_UPDATE", function()
-    SpellLocker = {}
-
     local guildName = GetGuildInfo("player")
 
-    if (guildName == "Tentative" and TentativeSpellMate:ShouldUpdateGuild()) then
+    if (guildName == "Tentative" and TentativeSpellMate:ShouldUpdateSpells()) then
         TentativeSpellMate:SaveSpells(name)
     end
 end)
